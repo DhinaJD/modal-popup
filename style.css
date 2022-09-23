@@ -1,0 +1,91 @@
+ html, html::before , html::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ #open-btn{
+    width: 250px;
+    height: 40px;
+    background-color:#8870ff;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    color: #ffffff;
+    border: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5ms ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+ }
+ #open-btn:hover{
+    background-color: #ffffff;
+    border: 1px solid #8870ff;
+    color: #8870ff;
+ }
+ /* Modal-body */
+ .modal{
+    background-color: rgba(0, 0, 0 , 0.6);
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+ }
+ .modal-content{
+    display: none;
+    width: 50vw;
+    min-height: 22vw;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 9rem;
+    position: relative;
+    text-align: center;
+    padding: 2rem 0;
+    animation:ease 0.3s topdown;
+ }
+ @keyframes topdown {
+    from{
+        opacity: 0;
+        top: -450px;
+    }
+    to{
+        opacity: 1;
+        top: 0;
+    }
+ }
+  /* modal-open */
+  .open{
+    display: block;
+ }
+ .modal-header .close-btn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+ }
+ .modal-header h2, h3{text-transform: uppercase;}
+ .modal-header h3{
+    letter-spacing: 3.3px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(158, 156, 156);
+ }
+ .modal-header h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5vw;
+    letter-spacing: 2.5px;
+    margin-top: 0.4vw;
+ }
+ .modal-body .bottom-line{
+    width: 35vw;
+    margin: 0 auto;
+    display: block;
+    height: 1px;
+    margin-bottom: 2rem;
+    background-color: rgb(158, 156, 156);
+ }
+
+

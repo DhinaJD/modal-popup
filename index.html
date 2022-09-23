@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Popup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@300&family=Titillium+Web:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+    <button type="button" id="open-btn">click</button>
+
+    <!-- Modal  -->
+    <div class="modal">
+      <div class="modal-content">
+         <div class="modal-header">
+            <span class="close-btn">&#9587;</span>
+            <h3>join the new frontier</h3>
+            <h2>10% off with<br>email signup</h2>
+         </div>
+         <div class="modal-body">
+            <span class="bottom-line"></span>
+            <form action="#">
+               <input type="text" name="input-box" id="input-fiels">
+               <button type="submit" class="submit-button">submit</button>
+            </form>
+         </div>
+      </div>
+    </div>
+ </body>
+ <script>
+   let modalEl =  document.querySelector(".modal");
+   let modalBody = document.querySelector(".modal-content");
+   let openBtn = document.getElementById("open-btn");
+   let closeBtn = document.querySelector(".close-btn");
+
+
+   function main(){
+      openBtn.addEventListener("click" , () =>{
+         modalEl.classList.add("open");
+         modalBody.classList.add("open");
+      })
+      closeBtn.addEventListener("click" , () =>{
+         modalEl.classList.remove("open");
+         modalBody.classList.remove("open");
+      })
+
+      window.addEventListener("click" , (event) =>{
+         console.log(event.target);
+        if(event.target === modalEl){
+           modalEl.classList.remove("open");
+        }
+      })  
+   }
+   main()
+ </script>
+ </html>
